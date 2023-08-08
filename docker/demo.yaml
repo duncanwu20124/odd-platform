@@ -8,7 +8,7 @@ services:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - POSTGRES_DATABASE=${POSTGRES_DATABASE}
     ports:
-      - 5432:5432
+      - 5433:5432
 
   odd-platform:
     image: ghcr.io/opendatadiscovery/odd-platform:latest
@@ -20,8 +20,8 @@ services:
     depends_on:
       - database
     ports:
-      - 8080:8080
-
+      - 1234:8080
+'''
   odd-platform-enricher:
     image: python:3.9.12-alpine3.15
     volumes:
@@ -45,7 +45,7 @@ services:
       - POSTGRES_USER=${SAMPLE_POSTGRES_USER}
       - POSTGRES_PASSWORD=${SAMPLE_POSTGRES_PASSWORD}
       - POSTGRES_DATABASE=${SAMPLE_POSTGRES_DATABASE}
-
+'''
   odd-collector:
     image: ghcr.io/opendatadiscovery/odd-collector:latest
     restart: always
@@ -57,5 +57,8 @@ services:
       - SAMPLE_POSTGRES_USER=${SAMPLE_POSTGRES_USER}
       - SAMPLE_POSTGRES_DATABASE=${SAMPLE_POSTGRES_DATABASE}
       - SAMPLE_POSTGRES_PASSWORD=${SAMPLE_POSTGRES_PASSWORD}
+      - MY_POSTGRES_USER=postgres
+      - MY_POSTGRES_PASSWORD=${MY_POSTGRES_PASSWORD}
+      - MY_POSTGRES_DATABASE=${MY_POSTGRES_DATABASE}
     depends_on:
       - sample-postgresql
