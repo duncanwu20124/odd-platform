@@ -1,9 +1,9 @@
 default_pulling_interval: 1
-token: "K6N9QG86FfowqdNF9AjIe9WSzm6adzTSX6O39d3y"
+token: "aQAvhfYtSahDTHEVrCOmXx46rL6yYmdeRfPqtWc2"
 plugins:
   - type: postgresql
     name: traffic
-    host: 172.21.0.2
+    host: 172.21.0.5
     port: 5432
     user: postgres
     password: !ENV ${MY_POSTGRES_PASSWORD}
