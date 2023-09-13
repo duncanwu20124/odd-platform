@@ -1,5 +1,5 @@
 default_pulling_interval: 1
-token: "aQAvhfYtSahDTHEVrCOmXx46rL6yYmdeRfPqtWc2"
+token: "I5ZUSCHYvEyp4rUE3AtnHqNZ6jemGB9O9lVZUjY7"
 plugins:
   - type: postgresql
     name: traffic
