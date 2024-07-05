@@ -23,7 +23,7 @@ services:
       - 1234:8080
 
   odd-collector:
-    image: ghcr.io/opendatadiscovery/odd-collector:0.1.62 # "ghcr.io/opendatadiscovery/odd-collector:latest" failed, use version 0.1.62
+    image: ghcr.io/opendatadiscovery/odd-collector:0.1.62 # "if ghcr.io/opendatadiscovery/odd-collector:latest" failed, use version 0.1.62
     restart: always
     volumes:
       - ./config/collector_config.yaml:/app/collector_config.yaml
