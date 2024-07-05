@@ -1,20 +1,19 @@
 default_pulling_interval: 10
-token: "jMhUWUs9YnjZel6SRFdotxOFElMS41JBnxnOUE7s"
+token: "MFc21oKGzrtQuXoPg1iVowAKH0pHBA45saiBiePc"
 plugins:
   - type: postgresql
-    name: traffic_db
+    name: test_db
     description: "" # Optional string
     database: postgres
-    host: 172.21.0.5
+    host: 172.20.0.5
     port: 5432
     user: postgres
     password: !ENV ${MY_POSTGRES_PASSWORD}
-  - type: postgresql
-    name: health_db
-    description: "" # Optional string
-    database: health
-    host: 172.21.0.5
-    port: 5432
-    user: postgres
-    password: !ENV ${MY_POSTGRES_PASSWORD}
-  
+#  - type: postgresql
+#    name: health_db
+#    description: "" # Optional string
+#    database: health
+#    host: 127.0.0.1
+#    port: 5432
+#    user: postgres
+#    password: !ENV ${MY_POSTGRES_PASSWORD}
